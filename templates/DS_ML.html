@@ -1,0 +1,140 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+.column1
+{
+float:top;
+width:100%;
+height:20%;
+box-shadow:2px 2px 2px 2px coral;
+}
+.column2
+{
+float:bottom;
+width:100%;
+height:79%;
+border:0px;
+}
+.row:after
+{
+	content:"";
+	display:table;
+	clear:both;
+}
+h1{
+	text-align:center;
+	font-size:50px;
+	padding-top:30px;
+}
+.sheet{
+ font-size:30px;
+ text-align:left;
+ padding-left:20px;
+ padding-right:20px;
+ 
+ padding-top:10px;
+ 
+}
+.sheet>.input
+{
+    width:100%;
+	height:30px;
+	border-radius: 5px 5px 5px 5px;
+	border-color: green;
+
+}	
+.btn{
+	border-radius:10px;
+	background:linear-gradient(white,red);
+	padding: 15px 32px;
+	text-align: center;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	
+	font-size:20px;
+}
+.btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<form action="{{url_for('home')}}", method="POST"> 
+<body>
+<div1 class="row">
+<div class="column1" style="background-color:white"><h1>Billboard Hot100 Prediction Using Spotify Data</h1>
+</div>
+<div class="column2">
+
+	<div class="sheet">
+		<label for="floatingInput">Danceability</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="a">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Energy</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="b">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Loudness</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="c">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Speachiness</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="d">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Acousticness</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="e">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Instrumentalness</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="f">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Liveness</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="g">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Valence</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="h">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Tempo</label>
+			<input type="text" class="input" id="floatingInput" placeholder="Enter the value" name="i">
+	</div>
+
+	<div class="sheet">
+		<label for="floatingInput">Genre</label>
+			<select name="j" class="input">
+			<option value=0>alternative</option>
+			<option value=1>classical</option>
+			<option value=2>country</option>
+			<option value=3>edm</option>
+			<option value=4>jazz</option>
+			<option value=5>metal</option>
+			<option value=6>pop</option>
+			<option value=7>rap</option>
+			<option value=8>reggae</option>
+			<option value=9>rock</option>
+			</select>
+	</div><br>
+	<div>
+	<center>
+        <button class="btn" type="submit" value="predict!">Predict </button>  <br>
+	</center>
+      </div>
+	</div>
+      	
+
+</body>
+</form>
+</html>
